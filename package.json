@@ -1,6 +1,7 @@
 {
-    "name": "probot",
+    "name": "probot-typing",
     "author": "sirMerr",
+    "description": "Type declaration file for probot",
     "version": "1.0.0",
     "types": "index.d.ts",
     "dependencies": {

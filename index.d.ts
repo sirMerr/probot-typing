@@ -1,6 +1,6 @@
 // Type definitions for probot v3.0.0 (WIP)
 // Project: github.com/probot/probot
-// Definitions by: Tiffany Le-Nguyen <github.com/sirMerr>
+// Definitions by: sirMerr <github.com/sirMerr>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 /// <reference types="express" />
 import * as Github from "github";
