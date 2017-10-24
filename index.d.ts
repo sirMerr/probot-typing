@@ -197,20 +197,21 @@ declare namespace probot {
          */
         on(event: string, callback: (context: Context)=> any): any;
 
-        probotEnhancedClient(github: Github): Github;
-
-        // Hack client to only allow one request at a time with a 1s delay
-        // https://github.com/mikedeboer/node-github/issues/526
-        rateLimitedClient(github: Github): Github;
-
-        // Return a function that defaults to "debug" level, and has properties for
-        // other levels:
-        //
-        //     robot.log("debug")
-        //     robot.log.trace("verbose details");
-        //
-        wrapLogger(logger: any): (any) => any;
     }
+
+    function probotEnhancedClient(github: Github): Github;
+    
+    // Hack client to only allow one request at a time with a 1s delay
+    // https://github.com/mikedeboer/node-github/issues/526
+    function rateLimitedClient(github: Github): Github;
+
+    // Return a function that defaults to "debug" level, and has properties for
+    // other levels:
+    //
+    //     robot.log("debug")
+    //     robot.log.trace("verbose details");
+    //
+    function wrapLogger(logger: any): (any) => any;
 
     export interface ContextProperties {
         event: string,
